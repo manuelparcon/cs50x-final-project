@@ -1,0 +1,72 @@
+body {
+    background-color: #F0F2F5;
+}
+
+.width-limit {
+    max-width: 800px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.navbar {
+    padding-top: 15px;
+    background-color: #F0F2F5;
+}
+
+a.navbar-brand {
+    font-family: "Fugaz One", sans-serif;
+    color: #25374D;
+    font-size: 2rem;
+}
+
+a.navbar-brand:hover {
+    color: #25374D;
+}
+
+.nav-item {
+    font-weight: 500;
+}
+
+.banner-text {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    color: #25374D;
+    font-size: 2.7rem;
+}
+
+.form-container {
+    background-color: #25374D;
+}
+
+.shorten-button {
+    background-color: #2385A4;
+    color: white;
+}
+
+.shorten-button:hover {
+    background-color: #1d6a82;
+    color:white;
+}
+
+.result-container {
+    background-color: white;
+}
+
+.copy-button {
+    background-color: #25374D;
+    color: white;
+}
+
+.copy-button:hover {
+    background-color: #1d2b3d;
+    color: white;
+}
+
+.long-url {
+    font-size: 1.25rem;
+}
+
+.short-url {
+    color: #2385A4;
+    font-size: 1.5rem;
+}

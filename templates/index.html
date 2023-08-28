@@ -1,0 +1,93 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+
+<!-- Banner -->
+<div class="container-fluid pt-5 pb-5">
+    <div class="container-fluid width-limit">
+        <div class="row align-items-center">
+
+            <div class="col-sm-7 col-12">
+                <div class="banner-text lh-sm">
+                    Free URL shortener 
+                </div>
+                <div class="banner-text lh-sm">
+                    Itsy bitsy links
+                </div>
+                <div class="pt-4">
+                    <p>Shorter links look better. Shorter links are easier to share. Create one and try it free today!</p>
+                </div>
+            </div>
+
+            <div class="col-sm-5 d-none d-sm-block">
+                <img src="/static/images/spider-link.png" class="img-fluid p-4">
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Main Content -->
+<div class="container-fluid mt-4 text-center width-limit">
+
+    <!-- URL Form -->
+    <div class="container-fluid rounded-3 shadow-sm form-container ">
+        <form class="input-group pt-4 pb-4 ps-3 pe-3">
+            <input type="url" id="url-input" class="form-control rounded me-sm-4 mb-sm-0 mb-3 col-sm-9 col-12" 
+            placeholder="Enter link here...">
+            <button class="btn rounded shorten-button col-sm-3 col-12">Shorten Link</button>
+        </form>
+    </div>
+
+    <!-- Error: TODO -->
+    <div class="container-fluid mt-3 mb-3 text-danger" id="link-error"></div>
+
+    <!-- Result -->
+    <div class="container-fluid card rounded col-sm-8 shadow-sm mt-5 result-container">
+        <div class="card-body">
+            <div class="card-title long-url" id="long-link">
+                Link created!
+            </div>
+            <div class="card-text mt-2 short-url" id="short-link">
+                Lorem ipsum dolor sit amet consectetur.
+            </div>
+            <button class="btn copy-button col-sm-4 col-12 mt-4 rounded" id="copy-btn">Copy</button>
+
+        </div>
+    </div>
+
+</div>
+
+
+
+<!-- Extra Content -->
+<div class="container-fluid mt-5 pt-1 text-center width-limit mb-5 pb-5">
+
+    <h3 class="container-fluid mt-5">
+        Make links shorter and easier to remember
+    </h3>
+    <p>
+        Just enter a link in the form above to generate a short link. 
+    </p>
+
+    <h3 class="container-fluid mt-5">
+        Lorem ipsum dolor sit
+    </h3>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+    </p>
+
+    <h3 class="container-fluid mt-5">
+        Lorem ipsum dolor sit amet consectetur
+    </h3>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing.
+    </p>
+
+</div>
+
+{% endblock %}
