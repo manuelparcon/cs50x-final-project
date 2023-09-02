@@ -35,29 +35,34 @@
 <div class="container-fluid mt-4 text-center width-limit">
 
     <!-- URL Form -->
-    <div class="container-fluid rounded-3 shadow-sm form-container ">
-        <form class="input-group pt-4 pb-4 ps-3 pe-3">
-            <input type="url" id="url-input" class="form-control rounded me-sm-4 mb-sm-0 mb-3 col-sm-9 col-12" 
+    <div class="container-fluid rounded-3 shadow-sm form-container">
+        <form class="input-group pt-4 pb-4 ps-3 pe-3" name="url_form" id="form" action="submit">
+            <input type="url" name="url" id="url-input" class="form-control rounded me-sm-4 mb-sm-0 mb-3 col-sm-9 col-12" 
             placeholder="Enter link here...">
-            <button class="btn rounded shorten-button col-sm-3 col-12">Shorten Link</button>
+            <button class="btn rounded shorten-button col-sm-3 col-12" id="submit-url">Shorten Link</button>
         </form>
     </div>
 
-    <!-- Error: TODO -->
-    <div class="container-fluid mt-3 mb-3 text-danger" id="link-error"></div>
+    <!-- Error -->
+    <div class="error">
+        <!--
+        <div class="container-fluid mt-3 mb-3 text-danger" id="error">Error</div>
+        -->
+    </div>
 
     <!-- Result -->
-    <div class="container-fluid card rounded col-sm-8 shadow-sm mt-5 result-container">
-        <div class="card-body">
-            <div class="card-title long-url" id="long-link">
-                Link created!
+    <div class="result">
+        <!--
+        <div class="container-fluid rounded col-sm-8 shadow-sm mt-5 p-4 result-card">
+            <div class="long-url" id="long-link">
+                Lorem ipsum dolor sit amet.
             </div>
-            <div class="card-text mt-2 short-url" id="short-link">
-                Lorem ipsum dolor sit amet consectetur.
+            <div class="mt-2 short-url" id="short-link">
+                Lorem, ipsum dolor.
             </div>
-            <button class="btn copy-button col-sm-4 col-12 mt-4 rounded" id="copy-btn">Copy</button>
-
+            <button class="btn copy-button col-sm-4 col-12 mt-3 rounded" id="copy-btn">Copy</button>
         </div>
+        -->
     </div>
 
 </div>
