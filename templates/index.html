@@ -36,33 +36,52 @@
 
     <!-- URL Form -->
     <div class="container-fluid rounded-3 shadow-sm form-container">
-        <form class="input-group pt-4 pb-4 ps-3 pe-3" name="url_form" id="form" action="submit">
+        <form class="input-group pt-4 pb-4 ps-3 pe-3" name="url_form" id="form" action="/" method="post">
             <input type="url" name="url" id="url-input" class="form-control rounded me-sm-4 mb-sm-0 mb-3 col-sm-9 col-12" 
             placeholder="Enter link here...">
-            <button class="btn rounded shorten-button col-sm-3 col-12" id="submit-url">Shorten Link</button>
+            <button class="btn rounded shorten-button col-sm-3 col-12" id="submit-url" type="submit">Shorten Link</button>
         </form>
-    </div>
-
-    <!-- Error -->
-    <div class="error">
-        <!--
-        <div class="container-fluid mt-3 mb-3 text-danger" id="error">Error</div>
-        -->
     </div>
 
     <!-- Result -->
     <div class="result">
+
         <!--
+        {% if result=='true' %}
         <div class="container-fluid rounded col-sm-8 shadow-sm mt-5 p-4 result-card">
-            <div class="long-url" id="long-link">
-                Lorem ipsum dolor sit amet.
+            <div class="mx-auto long-url" id="long-link">
+                {{ original_link }}
             </div>
-            <div class="mt-2 short-url" id="short-link">
-                Lorem, ipsum dolor.
+            <div class="mx-auto mt-2 short-url" id="short-link">
+                {{ short_link }}
             </div>
-            <button class="btn copy-button col-sm-4 col-12 mt-3 rounded" id="copy-btn">Copy</button>
+            <button class="btn copy-button col-sm-4 col-12 mt-3 rounded" id="copy-btn" 
+            onClick="copyToClipboard('{{ short_link }}')">Copy</button>
         </div>
+        {% endif %}
         -->
+
+        {% if result=='true' %}
+        <div class="container-fluid text-center rounded col-sm-8 shadow-sm mt-5 p-4 result-card">
+            <div class="row">
+                <div class="col long-url text-break" id="long-link">
+                    {{ original_link }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col mt-2 short-url text-break" id="short-link">
+                    {{ short_link }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <button class="btn copy-button col-sm-4 col-12 mt-3 rounded" id="copy-btn" 
+                    onClick="copyToClipboard('{{ short_link }}')">Copy</button>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
     </div>
 
 </div>
