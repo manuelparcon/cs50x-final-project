@@ -28,6 +28,7 @@ def index():
     else: 
         return render_template("index.html", active="home")
 
+
 @app.route("/faq")
 def faq():
     return render_template("faq.html", active="faq")
