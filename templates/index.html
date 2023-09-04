@@ -44,45 +44,27 @@
     </div>
 
     <!-- Result -->
-    <div class="result">
 
-        <!--
-        {% if result=='true' %}
-        <div class="container-fluid rounded col-sm-8 shadow-sm mt-5 p-4 result-card">
-            <div class="mx-auto long-url" id="long-link">
+    {% if result=='true' %}
+    <div class="container-fluid text-center rounded col-sm-8 shadow-sm mt-5 p-4 result-card">
+        <div class="row">
+            <div class="col long-url text-break" id="long-link">
                 {{ original_link }}
             </div>
-            <div class="mx-auto mt-2 short-url" id="short-link">
+        </div>
+        <div class="row">
+            <div class="col mt-2 short-url text-break" id="short-link">
                 {{ short_link }}
             </div>
-            <button class="btn copy-button col-sm-4 col-12 mt-3 rounded" id="copy-btn" 
-            onClick="copyToClipboard('{{ short_link }}')">Copy</button>
         </div>
-        {% endif %}
-        -->
-
-        {% if result=='true' %}
-        <div class="container-fluid text-center rounded col-sm-8 shadow-sm mt-5 p-4 result-card">
-            <div class="row">
-                <div class="col long-url text-break" id="long-link">
-                    {{ original_link }}
-                </div>
-            </div>
-            <div class="row">
-                <div class="col mt-2 short-url text-break" id="short-link">
-                    {{ short_link }}
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <button class="btn copy-button col-sm-4 col-12 mt-3 rounded" id="copy-btn" 
-                    onClick="copyToClipboard('{{ short_link }}')">Copy</button>
-                </div>
+        <div class="row">
+            <div class="col">
+                <button class="btn copy-button col-sm-4 col-12 mt-3 rounded" id="copy-btn" 
+                onClick="copyToClipboard('{{ short_link }}')">Copy</button>
             </div>
         </div>
-        {% endif %}
-
     </div>
+    {% endif %}
 
 </div>
 
