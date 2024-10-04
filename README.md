@@ -51,4 +51,4 @@ short url can be automatically copied to the clipboard using the "Copy" button m
 * Bootstrap
 
 ### Author
-Manuel Parcon - [Email me](mailto:mceparcon@gmail.com)
+Manuel Parcon
